@@ -13,7 +13,6 @@
   --line:      #e2e0d8;
   --dark:      #111417;
   --dark-soft: rgba(255, 255, 255, 0.72);
-  --dark-line: rgba(255, 255, 255, 0.16);
   --brass:     #a88b56;
   --brass-soft:#c9b27e;
   --sea:       #3b8fb4;
@@ -55,9 +54,6 @@ a  { color: var(--ink); }
 
 .section { padding: clamp(4.5rem, 9vw, 8rem) 0; }
 .section--sand { background: var(--bg); }
-.section--deep { background: var(--dark); }
-.section--deep h2, .section--deep h3 { color: #fff; }
-.section--deep p { color: var(--dark-soft); }
 
 /* Mono micro-label */
 .eyebrow {
@@ -69,8 +65,6 @@ a  { color: var(--ink); }
   color: var(--brass);
   margin-bottom: 1.2rem;
 }
-.eyebrow--gold { color: var(--brass-soft); }
-
 /* Editorial section head: left-aligned over a hairline */
 .section-head {
   max-width: none;
@@ -79,9 +73,7 @@ a  { color: var(--ink); }
   border-top: 1px solid var(--line);
   padding-top: 1.6rem;
 }
-.section--deep .section-head { border-top-color: var(--dark-line); }
 .section-head__lede { font-size: 1.02rem; max-width: 62ch; }
-.section-head--light h2 { color: #fff; }
 
 /* ---------- Buttons ---------- */
 .btn {
@@ -282,7 +274,7 @@ a  { color: var(--ink); }
 .hero__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(13, 16, 18, 0.5) 0%, rgba(13, 16, 18, 0.12) 45%, rgba(13, 16, 18, 0.62) 100%);
+  background: linear-gradient(180deg, rgba(13, 16, 18, 0.38) 0%, rgba(13, 16, 18, 0.08) 45%, rgba(13, 16, 18, 0.48) 100%);
 }
 .hero__content {
   position: relative;
@@ -437,11 +429,11 @@ a  { color: var(--ink); }
 .room-card:hover .room-card__media { transform: scale(1.04); }
 
 /* Room photography from the villa's listing */
-.room-card__media--master { background-image: url("../images/room-sand-dollar.jpg"); background-color: #1d2428; }
-.room-card__media--two    { background-image: url("../images/room-cool-breeze.jpg"); background-color: #1d2428; }
-.room-card__media--three  { background-image: url("../images/room-sea-surf.jpg"); background-color: #1d2428; }
-.room-card__media--four   { background-image: url("../images/room-sunrise.jpg"); background-color: #1d2428; }
-.room-card__media--five   { background-image: url("../images/room-paradise-cove.jpg"); background-color: #1d2428; }
+.room-card__media--master { background-image: url("../images/room-sand-dollar.jpg"); background-color: #d9d5c9; }
+.room-card__media--two    { background-image: url("../images/room-cool-breeze.jpg"); background-color: #d9d5c9; }
+.room-card__media--three  { background-image: url("../images/room-sea-surf.jpg"); background-color: #d9d5c9; }
+.room-card__media--four   { background-image: url("../images/room-sunrise.jpg"); background-color: #d9d5c9; }
+.room-card__media--five   { background-image: url("../images/room-paradise-cove.jpg"); background-color: #d9d5c9; }
 
 .room-card__body { padding: 2rem 2.1rem 1.8rem; }
 .room-card__body p { font-size: 0.95rem; }
@@ -471,20 +463,20 @@ a  { color: var(--ink); }
   gap: 2.6rem 2rem;
 }
 .amenity {
-  border-top: 1px solid var(--dark-line);
+  border-top: 1px solid var(--line);
   padding-top: 1.4rem;
   transition: border-color 0.3s ease;
 }
-.amenity:hover { border-top-color: var(--brass-soft); }
+.amenity:hover { border-top-color: var(--brass); }
 .amenity__num {
   font-family: var(--font-mono);
   font-size: 0.72rem;
   letter-spacing: 0.2em;
-  color: var(--brass-soft);
+  color: var(--brass);
   display: block;
   margin-bottom: 1.1rem;
 }
-.amenity h3 { font-size: 1rem; color: #fff; }
+.amenity h3 { font-size: 1rem; }
 .amenity p { font-size: 0.88rem; margin: 0; }
 
 /* ---------- Experiences ---------- */
@@ -504,12 +496,12 @@ a  { color: var(--ink); }
 
 /* Attraction photos from the villa's listing; the two waterfalls have no
    listing photos yet, so they keep muted placeholders */
-.exp-card__media--lagoon  { background-image: url("../images/exp-blue-lagoon.jpg"); background-color: #1d2428; }
-.exp-card__media--island  { background-image: url("../images/exp-monkey-island.jpg"); background-color: #1d2428; }
-.exp-card__media--cove    { background-image: url("../images/exp-frenchmans-cove.jpg"); background-color: #1d2428; }
-.exp-card__media--rafting { background-image: linear-gradient(160deg, #353e36, #1d2428); }
-.exp-card__media--beach   { background-image: url("../images/exp-boston-jerk.jpg"); background-color: #1d2428; }
-.exp-card__media--falls   { background-image: linear-gradient(160deg, #2c3a3e, #1d2428); }
+.exp-card__media--lagoon  { background-image: url("../images/exp-blue-lagoon.jpg"); background-color: #d9d5c9; }
+.exp-card__media--island  { background-image: url("../images/exp-monkey-island.jpg"); background-color: #d9d5c9; }
+.exp-card__media--cove    { background-image: url("../images/exp-frenchmans-cove.jpg"); background-color: #d9d5c9; }
+.exp-card__media--rafting { background-image: linear-gradient(160deg, #c2cbbb, #dfdacb); }
+.exp-card__media--beach   { background-image: url("../images/exp-boston-jerk.jpg"); background-color: #d9d5c9; }
+.exp-card__media--falls   { background-image: linear-gradient(160deg, #c6d2cf, #dfdacb); }
 
 .exp-card__body { padding: 1.3rem 0 0; }
 .exp-card h3 { font-size: 1.05rem; }
@@ -538,12 +530,12 @@ a  { color: var(--ink); }
 .gallery__item:hover::before { background: rgba(13, 16, 18, 0.18); }
 
 /* Villa photography from the listing */
-.gallery__item--a { grid-column: span 2; grid-row: span 2; background-image: url("../images/gallery-night.jpg"); background-color: #1d2428; }
-.gallery__item--b { background-image: url("../images/gallery-whirlpool.jpg"); background-color: #1d2428; }
-.gallery__item--c { background-image: url("../images/gallery-view.jpg"); background-color: #1d2428; }
-.gallery__item--d { background-image: url("../images/gallery-food.jpg"); background-color: #1d2428; }
-.gallery__item--e { background-image: url("../images/gallery-staff.jpg"); background-color: #1d2428; }
-.gallery__item--f { grid-column: span 2; background-image: url("../images/gallery-deck.jpg"); background-color: #1d2428; }
+.gallery__item--a { grid-column: span 2; grid-row: span 2; background-image: url("../images/gallery-night.jpg"); background-color: #d9d5c9; }
+.gallery__item--b { background-image: url("../images/gallery-whirlpool.jpg"); background-color: #d9d5c9; }
+.gallery__item--c { background-image: url("../images/gallery-view.jpg"); background-color: #d9d5c9; }
+.gallery__item--d { background-image: url("../images/gallery-food.jpg"); background-color: #d9d5c9; }
+.gallery__item--e { background-image: url("../images/gallery-staff.jpg"); background-color: #d9d5c9; }
+.gallery__item--f { grid-column: span 2; background-image: url("../images/gallery-deck.jpg"); background-color: #d9d5c9; }
 
 .gallery__item figcaption {
   position: absolute;
@@ -616,47 +608,47 @@ a  { color: var(--ink); }
   margin-bottom: 2.4rem;
 }
 .rate-card {
-  border-top: 1px solid var(--dark-line);
+  border-top: 1px solid var(--line);
   padding-top: 1.5rem;
   text-align: left;
   transition: border-color 0.3s ease;
 }
-.rate-card:hover { border-top-color: var(--brass-soft); }
-.rate-card--featured { border-top: 2px solid var(--brass-soft); }
+.rate-card:hover { border-top-color: var(--brass); }
+.rate-card--featured { border-top: 2px solid var(--brass); }
 .rate-card h3 {
   font-family: var(--font-mono);
   font-size: 0.72rem;
   font-weight: 400;
   letter-spacing: 0.24em;
   text-transform: uppercase;
-  color: var(--brass-soft);
+  color: var(--brass);
 }
 .rate-card__price {
   font-family: var(--font-mono);
   font-size: 2.5rem;
   font-weight: 400;
   line-height: 1.15;
-  color: #fff !important;
+  color: var(--ink);
   margin: 0.6rem 0 0.4rem;
 }
 .rate-card__price span {
   font-size: 0.8rem;
   letter-spacing: 0.08em;
-  color: rgba(255, 255, 255, 0.55);
+  color: var(--ink-soft);
 }
 .rate-card__detail {
   font-size: 0.85rem;
-  color: var(--dark-soft) !important;
+  color: var(--ink-soft);
   margin: 0;
 }
-.rate-card__detail strong { color: #fff; font-weight: 500; }
+.rate-card__detail strong { color: var(--ink); font-weight: 500; }
 .rates-note {
   font-family: var(--font-mono);
   text-align: left;
   font-size: 0.7rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.5) !important;
+  color: var(--ink-soft);
 }
 
 /* ---------- Contact / booking ---------- */
@@ -838,18 +830,19 @@ a  { color: var(--ink); }
   height: 46px;
   display: grid;
   place-items: center;
-  background: var(--dark);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  color: #fff;
+  background: rgba(246, 245, 241, 0.94);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--line);
+  color: var(--ink);
   font-size: 1rem;
   text-decoration: none;
   opacity: 0;
   transform: translateY(16px);
   pointer-events: none;
-  transition: opacity 0.35s ease, transform 0.35s ease, background 0.25s ease, color 0.25s ease;
+  transition: opacity 0.35s ease, transform 0.35s ease, background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
 }
 .to-top.is-visible { opacity: 1; transform: none; pointer-events: auto; }
-.to-top:hover { background: #fff; color: var(--ink); border-color: var(--ink); }
+.to-top:hover { border-color: var(--ink); }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
@@ -879,18 +872,18 @@ a  { color: var(--ink); }
     flex-direction: column;
     justify-content: center;
     gap: 2.2rem;
-    background: rgba(17, 20, 23, 0.97);
+    background: rgba(246, 245, 241, 0.98);
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
   }
   .nav__menu.is-open { opacity: 1; pointer-events: auto; }
-  .nav__menu a, .site-header.is-scrolled .nav__menu a { font-size: 0.95rem; color: #fff; }
+  .nav__menu a, .site-header.is-scrolled .nav__menu a { font-size: 0.95rem; color: var(--ink); }
   body.menu-open { overflow: hidden; }
   .nav__toggle.is-open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
   .nav__toggle.is-open span:nth-child(2) { opacity: 0; }
   .nav__toggle.is-open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
-  .nav__toggle.is-open span { background: #fff !important; }
+  .nav__toggle.is-open span { background: var(--ink) !important; }
   .nav__toggle { position: relative; z-index: 110; }
 
   /* Staggered entrance for menu items */
