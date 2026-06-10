@@ -265,12 +265,10 @@ a  { color: var(--lagoon); }
 .hero__media {
   position: absolute;
   inset: 0;
+  /* Gradient paints first while the photo loads, and serves as fallback */
   background:
-    radial-gradient(ellipse 120% 70% at 50% 110%, rgba(111, 179, 191, 0.55), transparent 60%),
-    radial-gradient(ellipse 90% 60% at 80% 0%, rgba(29, 122, 140, 0.5), transparent 65%),
+    url("../images/hero.jpg") center / cover no-repeat,
     linear-gradient(180deg, #0a3340 0%, #11505f 55%, #1d7a8c 100%);
-  /* Replace with a real villa hero photo:
-     background-image: url("../images/hero.jpg"); background-size: cover; background-position: center; */
   animation: heroDrift 18s ease-in-out infinite alternate;
 }
 @keyframes heroDrift {
@@ -324,6 +322,25 @@ a  { color: var(--lagoon); }
 @keyframes heroEnter {
   to { opacity: 1; transform: none; }
 }
+
+/* Airbnb rating chip */
+.hero__rating {
+  display: inline-block;
+  margin-top: 1.6rem;
+  padding: 0.45rem 1.2rem;
+  border-radius: 100px;
+  background: rgba(8, 38, 48, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  backdrop-filter: blur(6px);
+  transition: border-color 0.25s ease, background 0.25s ease;
+}
+.hero__rating span { color: var(--gold-soft); }
+.hero__rating:hover { border-color: var(--gold-soft); background: rgba(8, 38, 48, 0.65); }
+.hero__rating.hero-enter { animation-delay: 0.85s; }
 
 /* Scroll hint */
 .hero__scroll {
@@ -445,12 +462,12 @@ a  { color: var(--lagoon); }
   transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .room-card:hover .room-card__media { transform: scale(1.05); }
-/* Gradient placeholders — swap each for a real room photo via background-image */
-.room-card__media--master { background-image: linear-gradient(135deg, #11505f, #6fb3bf); }
-.room-card__media--two    { background-image: linear-gradient(135deg, #1d7a8c, #c9a227); }
-.room-card__media--three  { background-image: linear-gradient(135deg, #0b3947, #1d7a8c); }
-.room-card__media--four   { background-image: linear-gradient(135deg, #6fb3bf, #efe6d6); }
-.room-card__media--five   { background-image: linear-gradient(135deg, #0e4d5e, #e3c869); }
+/* Room photography from the villa's listing */
+.room-card__media--master { background-image: url("../images/room-sand-dollar.jpg"); background-color: #11505f; }
+.room-card__media--two    { background-image: url("../images/room-cool-breeze.jpg"); background-color: #1d7a8c; }
+.room-card__media--three  { background-image: url("../images/room-sea-surf.jpg"); background-color: #0b3947; }
+.room-card__media--four   { background-image: url("../images/room-sunrise.jpg"); background-color: #6fb3bf; }
+.room-card__media--five   { background-image: url("../images/room-paradise-cove.jpg"); background-color: #0e4d5e; }
 
 .room-card__body { padding: 1.8rem 1.9rem 1.6rem; }
 .room-card__tags {
@@ -523,12 +540,13 @@ a  { color: var(--lagoon); }
   transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .exp-card:hover .exp-card__media { transform: scale(1.06); }
-/* Gradient placeholders — swap for photos of each attraction */
-.exp-card__media--lagoon  { background-image: linear-gradient(160deg, #1d7a8c, #0b3947); }
-.exp-card__media--island  { background-image: linear-gradient(160deg, #2e6b4f, #6fb3bf); }
-.exp-card__media--cove    { background-image: linear-gradient(160deg, #6fb3bf, #c9a227); }
+/* Attraction photos from the villa's listing; the two waterfalls have no
+   listing photos yet, so they keep gradient placeholders */
+.exp-card__media--lagoon  { background-image: url("../images/exp-blue-lagoon.jpg"); background-color: #1d7a8c; }
+.exp-card__media--island  { background-image: url("../images/exp-monkey-island.jpg"); background-color: #2e6b4f; }
+.exp-card__media--cove    { background-image: url("../images/exp-frenchmans-cove.jpg"); background-color: #6fb3bf; }
 .exp-card__media--rafting { background-image: linear-gradient(160deg, #4a7c59, #1d7a8c); }
-.exp-card__media--beach   { background-image: linear-gradient(160deg, #e3c869, #6fb3bf); }
+.exp-card__media--beach   { background-image: url("../images/exp-boston-jerk.jpg"); background-color: #e3c869; }
 .exp-card__media--falls   { background-image: linear-gradient(160deg, #6fb3bf, #4a7c59); }
 .exp-card__body { padding: 1.5rem 1.5rem 1.2rem; }
 .exp-card h3 { font-size: 1.25rem; }
@@ -560,13 +578,13 @@ a  { color: var(--lagoon); }
   transition: transform 0.35s ease, opacity 0.35s ease;
 }
 .gallery__item:hover figcaption { transform: none; opacity: 1; }
-/* Gradient placeholders — replace with villa photography */
-.gallery__item--a { grid-column: span 2; grid-row: span 2; background-image: linear-gradient(140deg, #0e4d5e, #e3c869); }
-.gallery__item--b { background-image: linear-gradient(140deg, #1d7a8c, #6fb3bf); }
-.gallery__item--c { background-image: linear-gradient(140deg, #0b3947, #1d7a8c); }
-.gallery__item--d { background-image: linear-gradient(140deg, #c9a227, #0e4d5e); }
-.gallery__item--e { background-image: linear-gradient(140deg, #6fb3bf, #0b3947); }
-.gallery__item--f { grid-column: span 2; background-image: linear-gradient(140deg, #11505f, #6fb3bf); }
+/* Villa photography from the listing */
+.gallery__item--a { grid-column: span 2; grid-row: span 2; background-image: url("../images/gallery-night.jpg"); background-color: #0e4d5e; }
+.gallery__item--b { background-image: url("../images/gallery-whirlpool.jpg"); background-color: #1d7a8c; }
+.gallery__item--c { background-image: url("../images/gallery-view.jpg"); background-color: #0b3947; }
+.gallery__item--d { background-image: url("../images/gallery-food.jpg"); background-color: #c9a227; }
+.gallery__item--e { background-image: url("../images/gallery-staff.jpg"); background-color: #6fb3bf; }
+.gallery__item--f { grid-column: span 2; background-image: url("../images/gallery-deck.jpg"); background-color: #11505f; }
 .gallery__item figcaption {
   position: absolute;
   inset: auto 0 0 0;
@@ -578,6 +596,24 @@ a  { color: var(--lagoon); }
 }
 
 /* ---------- Testimonials ---------- */
+.rating-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: 1.1rem;
+  font-size: 0.95rem;
+}
+.rating-badge__stars { color: var(--gold); letter-spacing: 0.15em; }
+.rating-badge a {
+  color: var(--ink-soft);
+  text-decoration: none;
+  border-bottom: 1px solid var(--gold-soft);
+  transition: color 0.25s ease;
+}
+.rating-badge a:hover { color: var(--deep); }
+.quotes-more { text-align: center; margin: 2.4rem 0 0; }
+
 .quote-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

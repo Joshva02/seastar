@@ -40,18 +40,26 @@ python3 -m http.server 8000
 # → http://localhost:8000
 ```
 
+## Photos & reviews
+
+The 16 photos in `images/` were pulled from the villa's own
+[Airbnb listing](https://www.airbnb.com/rooms/9380578) (★4.92, 12 reviews), as were the
+six featured guest reviews and the rating badges. Two attraction cards (Reach Falls and
+Somerset Falls) have no listing photos and keep gradient placeholders.
+
+Note: the Airbnb listing nicknames one bedroom "Coral Reef" while seastarjamaica.com calls
+it "Sunrise" — `images/room-sunrise.jpg` is the Airbnb "Coral Reef" photo. Swap if those
+are actually different rooms.
+
 ## Before going live
 
-1. **Photos** — all imagery is currently tasteful gradient placeholders (the live site's photo
-   downloads are blocked by its bot protection, so they couldn't be copied automatically).
-   The originals live on the current site under `uploads/1/` (e.g. `uploads/1/1000.JPG` …
-   `1160.JPG`) — copy them from the hosting account and set `background-image: url(...)` on
-   the classes marked with "placeholder" comments in `css/style.css` (hero, room cards,
-   experience cards, gallery tiles).
-2. **Form backend** — the enquiry form currently uses `mailto:`; point it at a service like
+1. **Form backend** — the enquiry form currently uses `mailto:`; point it at a service like
    Formspree (or a small PHP handler on the existing SiteGround hosting) for reliable delivery.
-3. **Rates** — dates/prices were taken from the live site's 2025–26 season table; update
+2. **Rates** — dates/prices were taken from the live site's 2025–26 season table; update
    yearly as needed.
+3. **Hero photo** — a May 2025 Airbnb review notes the house is now painted white, but the
+   listing photos still show it green; replace `images/hero.jpg` with a current photo when
+   available.
 
 ## Deploying
 
