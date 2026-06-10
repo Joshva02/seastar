@@ -44,18 +44,26 @@
     <div class="hero__media" role="img" aria-label="The Caribbean Sea at the Blue Lagoon, Port Antonio"></div>
     <div class="hero__overlay"></div>
     <div class="hero__content">
-      <p class="hero__eyebrow reveal">The Blue Lagoon · Port Antonio · Jamaica</p>
-      <h1 class="hero__title reveal">Get away<br>to paradise</h1>
-      <p class="hero__lede reveal">An ultra-luxurious five-bedroom waterfront villa, nestled between
+      <p class="hero__eyebrow hero-enter">The Blue Lagoon · Port Antonio · Jamaica</p>
+      <h1 class="hero__title hero-enter">Get away<br>to paradise</h1>
+      <p class="hero__lede hero-enter">An ultra-luxurious five-bedroom waterfront villa, nestled between
         the lush hills of Portland and the sparkling waters of Jamaica's world-famous Blue Lagoon.</p>
-      <div class="hero__actions reveal">
+      <div class="hero__actions hero-enter">
         <a class="btn btn--gold" href="#contact">Check Availability</a>
         <a class="btn btn--ghost" href="#villa">Explore the Villa</a>
       </div>
+      <a class="hero__scroll hero-enter" href="#villa" aria-label="Scroll to content">
+        <span class="hero__scroll-dot"></span>
+      </a>
     </div>
-    <svg class="hero__wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
-      <path d="M0,40 C240,90 480,0 720,35 C960,70 1200,10 1440,45 L1440,90 L0,90 Z" fill="var(--sand)"/>
-    </svg>
+    <div class="hero__waves" aria-hidden="true">
+      <svg class="hero__wave hero__wave--back" viewBox="0 0 2880 90" preserveAspectRatio="none">
+        <path d="M0,50 C240,85 480,10 720,42 C960,74 1200,20 1440,50 C1680,85 1920,10 2160,42 C2400,74 2640,20 2880,50 L2880,90 L0,90 Z" fill="rgba(247,242,233,0.4)"/>
+      </svg>
+      <svg class="hero__wave hero__wave--front" viewBox="0 0 2880 90" preserveAspectRatio="none">
+        <path d="M0,45 C240,90 480,0 720,40 C960,78 1200,12 1440,45 C1680,90 1920,0 2160,40 C2400,78 2640,12 2880,45 L2880,90 L0,90 Z" fill="var(--sand)"/>
+      </svg>
+    </div>
   </section>
 
   <!-- ============ INTRO / THE VILLA ============ -->
@@ -76,10 +84,10 @@
         <a class="link-arrow" href="#experiences">Discover Port Antonio</a>
       </div>
       <div class="stat-cards reveal">
-        <div class="stat-card"><span class="stat-card__num">5</span><span class="stat-card__label">En-suite bedrooms</span></div>
-        <div class="stat-card"><span class="stat-card__num">12</span><span class="stat-card__label">Guests in comfort</span></div>
-        <div class="stat-card"><span class="stat-card__num">3</span><span class="stat-card__label">Full-time staff</span></div>
-        <div class="stat-card"><span class="stat-card__num">10</span><span class="stat-card__label">Guest sea-side whirlpool</span></div>
+        <div class="stat-card"><span class="stat-card__num" data-count="5">5</span><span class="stat-card__label">En-suite bedrooms</span></div>
+        <div class="stat-card"><span class="stat-card__num" data-count="12">12</span><span class="stat-card__label">Guests in comfort</span></div>
+        <div class="stat-card"><span class="stat-card__num" data-count="3">3</span><span class="stat-card__label">Full-time staff</span></div>
+        <div class="stat-card"><span class="stat-card__num" data-count="10">10</span><span class="stat-card__label">Guest sea-side whirlpool</span></div>
       </div>
     </div>
   </section>
@@ -367,6 +375,8 @@
       <p class="footer__copy">© <span id="year"></span> Sea Star Villa Jamaica. All rights reserved.</p>
     </div>
   </footer>
+
+  <a class="to-top" href="#top" aria-label="Back to top">↑</a>
 
   <script src="js/main.js"></script>
 </body>
