@@ -39,9 +39,11 @@ live site (and its public listings):
 - `images/og.jpg` — 1200×630 social-share image (hero photo + starfish + wordmark),
   referenced by the `og:image`/`twitter:image` meta tags; regenerate if the hero changes
 
-Design: lagoon teal + warm sand + antique gold palette, Cormorant Garamond display type with
-Jost body text, scroll-reveal animations (respects `prefers-reduced-motion`), sticky frosted
-nav, fully responsive with a mobile menu.
+Design: modern minimalism / luxury real estate aesthetic — ivory and charcoal palette with a
+muted brass accent, **Geist** throughout with **Geist Mono** for micro-labels and figures,
+squared corners and hairline borders instead of shadows, left-aligned editorial section heads,
+numbered amenity entries, scroll-reveal animations (respects `prefers-reduced-motion`), a
+transparent-to-ivory sticky nav, fully responsive with a mobile menu.
 
 ## Run locally
 
