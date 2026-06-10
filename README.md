@@ -25,7 +25,19 @@ live site (and its public listings):
 - **Rates** — real rates: $1,500/night (Apr 15–Dec 14), $1,700/night (Dec 15–Apr 14),
   $13,000 Christmas/New Year's week (Dec 25–Jan 1), with minimum stays and house policies
 - **Contact** — address (Blue Lagoon, Portland, Jamaica, W.I.), phone +1 (876) 383-8337,
-  reservations@seastarjamaica.com, Facebook & Instagram, plus an enquiry form
+  reservations@seastarjamaica.com, Facebook & Instagram
+- **Booking** — a client-side booking widget (`js/booking.js`): live quote from the seasonal
+  rates with a per-season breakdown, 2-/7-night minimum-stay validation, no past dates,
+  12-guest cap, and two checkouts — a prefilled email enquiry, or an Airbnb deep link that
+  carries the chosen dates and guest count into the listing
+
+## Brand assets
+
+- `images/favicon.svg` — starfish mark (SVG recreation of the Sea Star logo), used as the
+  favicon and as the logo mark in the nav and footer
+- `images/logo.svg` — full logo lockup (starfish between "Sea" and "Star")
+- `images/og.jpg` — 1200×630 social-share image (hero photo + starfish + wordmark),
+  referenced by the `og:image`/`twitter:image` meta tags; regenerate if the hero changes
 
 Design: lagoon teal + warm sand + antique gold palette, Cormorant Garamond display type with
 Jost body text, scroll-reveal animations (respects `prefers-reduced-motion`), sticky frosted
