@@ -803,6 +803,16 @@ a  { color: var(--ink); }
   transition: color 0.25s ease;
 }
 .footer__links a:hover { color: #fff; }
+.footer__motto {
+  width: 100%;
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--brass-soft);
+  margin: 0;
+}
 .footer__copy {
   font-family: var(--font-mono);
   font-size: 0.68rem;
